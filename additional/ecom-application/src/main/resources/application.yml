@@ -3,6 +3,8 @@
 #spring.datasource.url=jdbc:h2:mem:test
 # spring.jpa.show-sql=true
 # spring.jpa.hibernate.ddl-auto=create
+# management.endpoints.web.exposure.include=*
+#endpoint.health.show-details=always
 spring:
   application:
     name: ecom-application
@@ -15,3 +17,54 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
+
+management:
+  endpoints:
+    web:
+      exposure:
+#        include: beans, health, loggers # Expose the 'beans' and 'health' endpoints.
+        include: '*' # Expose the 'beans' and 'health' endpoints.
+
+  endpoint:
+    health:
+      show-details: always # Possible values: never, always, when_authorized
+    shutdown:
+      enabled: true
+  info: # show app, info when /actuator/info
+    env:
+      enabled: true
+
+server:
+  shutdown: graceful
+
+info:  # show app info when /actuator/info
+  app:
+    name: MyNewApp # Name of the application
+    description: App built by us # Description of the application
+    version: 1.0.0 # Version of the application
+
+
+
+
+
+
+
+
+
+
+#############################################
+################# ACTUATORS #################
+#############################################
+  # Some of the most commonly used endpoints are:
+  # /actuator/health: Displays application health information (e.g., status, details)
+  # /actuator/info: Displays application information (e.g., name, version, build)
+  # /actuator/metrics: Displays application metrics (e.g., CPU usage, memory usage)
+  # /actuator/mappings: Displays the configured HTTP request mappings
+  # /actuator/beans: Displays the Spring beans in the application context
+  # /actuator/env: Displays the application environment properties
+  # /actuator/trace: Displays traces of recent requests
+  # /actuator/dump: Dumps the heap of the running application
+  # /actuator/configprops: Displays the application configuration properties
+  # /actuator/logfile: Tails the log file of the running application
+  # /actuator/httptrace: Displays HTTP request and response details
+  # /actuator/refresh: Refreshes the application context
