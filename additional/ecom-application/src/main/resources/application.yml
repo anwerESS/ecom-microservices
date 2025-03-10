@@ -8,40 +8,50 @@
 spring:
   application:
     name: ecom-application
-  h2:
-    console:
-      enabled: true
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:postgresql://localhost:5432/ecomdb
+    username: embarkx
+    password: embarkx
   jpa:
+    database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create
+          ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:test
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+
 
 management:
   endpoints:
     web:
       exposure:
-#        include: beans, health, loggers # Expose the 'beans' and 'health' endpoints.
-        include: '*' # Expose the 'beans' and 'health' endpoints.
-
+        include: beans, health
   endpoint:
     health:
-      show-details: always # Possible values: never, always, when_authorized
+      show-details: always
     shutdown:
       enabled: true
-  info: # show app, info when /actuator/info
+  info:
     env:
       enabled: true
 
 server:
   shutdown: graceful
 
-info:  # show app info when /actuator/info
+info:
   app:
-    name: MyNewApp # Name of the application
-    description: App built by us # Description of the application
-    version: 1.0.0 # Version of the application
+    name: MyNewApp
+    description: App built by us
+    version: 1.0.0
 
 
 
@@ -52,9 +62,11 @@ info:  # show app info when /actuator/info
 
 
 
-#############################################
-################# ACTUATORS #################
-#############################################
+  
+
+  #############################################
+  ################# ACTUATORS #################
+  #############################################
   # Some of the most commonly used endpoints are:
   # /actuator/health: Displays application health information (e.g., status, details)
   # /actuator/info: Displays application information (e.g., name, version, build)
@@ -68,3 +80,4 @@ info:  # show app info when /actuator/info
   # /actuator/logfile: Tails the log file of the running application
   # /actuator/httptrace: Displays HTTP request and response details
   # /actuator/refresh: Refreshes the application context
+
