@@ -4,8 +4,10 @@ spring:
 #  profiles:
 #    active: dev
 
-#build:
-#  id: 122
-#  version: 2.2.2
-#  name: "Default-Build"
-#  type: "Default Build"
+build:
+  id: ${ID:123}
+  version: ${VERSION:v1.2.3}
+  name: ${NAME:default_version}
+
+#  BUILD_ID=4444;BUILD_NAME=NAME_TEST;BUILD_VERSION=1.0.0
+# ID=9999;NAME=NEW_NAME;VERSION=3.3.3.3
