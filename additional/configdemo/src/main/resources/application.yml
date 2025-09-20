@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-demo
+#  profiles:
+#    active: dev
+
+#build:
+#  id: 122
+#  version: 2.2.2
+#  name: "Default-Build"
+#  type: "Default Build"
