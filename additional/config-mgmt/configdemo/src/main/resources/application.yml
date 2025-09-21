@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: configdemo
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: prod
+
+build:
+  id: ${ID:123}
+  version: ${VERSION:v1.2.3}
+  name: ${NAME:default_version}
+
+# expose the refresh endpoint
+# it allows to refresh the configuration by calling it
+# curl -X POST http://localhost:8888/actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+#  BUILD_ID=4444;BUILD_NAME=NAME_TEST;BUILD_VERSION=1.0.0
+# ID=9999;NAME=NEW_NAME;VERSION=3.3.3.3
