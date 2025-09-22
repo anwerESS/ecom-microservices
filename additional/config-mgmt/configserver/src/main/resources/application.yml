@@ -1,6 +1,13 @@
 spring:
   application:
     name: configserver
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/configdb
+    username: ${USER}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     config:
       server:
@@ -8,5 +15,8 @@ spring:
           uri: https://github.com/anwerESS/app-configuration
 #          username: ${GIT_USER}
 #          password: ${GIT_TOKEN}
+        jdbc:
+          sql: "SELECT PROP_KEY, PROP_VALUE from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?"
+          default-label: main
 server:
   port: 8888
