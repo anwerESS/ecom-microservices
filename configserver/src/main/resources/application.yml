@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+server:
+  port: 8888
+
+encrypt:
+  key: "0E329232EA6D0D73"

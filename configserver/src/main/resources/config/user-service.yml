@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ecom_user
+      database: ecom_user
+
+server:
+  port: 8082
