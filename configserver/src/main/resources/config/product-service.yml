@@ -6,6 +6,7 @@ spring:
     #    url: jdbc:mysql://localhost:3307/embarkx
     username: embarkx
     password: embarkx
+    driver-class-name: org.postgresql.Driver
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -26,7 +27,13 @@ spring:
 #    hibernate:
 #      ddl-auto: create
 
-server:
-  port: 8081
 
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+app:
+  message: "Hello Product!"

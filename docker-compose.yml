@@ -58,8 +58,8 @@ services:
       - backend
 
   rabbitmq:
-    image: rabbitmq:3.13-management
-    container_name: rabbitmq
+    container_name: rabbitmq_container
+    image: rabbitmq:3-management
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
@@ -68,6 +68,7 @@ services:
       - "15672:15672" # Management UI (http://localhost:15672)
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
+
     networks:
       - backend
     restart: unless-stopped

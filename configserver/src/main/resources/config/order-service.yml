@@ -5,6 +5,12 @@ spring:
     url: jdbc:postgresql://localhost:5432/order
     username: embarkx
     password: embarkx
+    driver-class-name: org.postgresql.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -22,5 +28,11 @@ spring:
 #    hibernate:
 #      ddl-auto: create
 
-server:
-  port: 8083
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+app:
+  message: "Hello Order!"
