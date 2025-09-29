@@ -1,0 +1,32 @@
+
+EUREKA SERVER SETTINGS
+----------------------
+Property                                        Default      Description
+eureka.server.enable-self-preservation          true         Prevents automatic removal of instances if many services go down at once.
+eureka.server.eviction-interval-timer-in-ms     60000 (60s)  How often Eureka cleans up stale instances.
+eureka.server.expected-client-renewal-interval-seconds 30    Expected heartbeat interval from services.
+eureka.instance.prefer-ip-address               false        If true, registers instances using their IP address instead of hostname.
+eureka.instance.instance-id                     Auto-generated  Custom identifier for the service instance.
+
+EUREKA CLIENT SETTINGS (MICROSERVICE SIDE)
+------------------------------------------
+Property                                        Default      Description
+eureka.client.register-with-eureka              true         Whether the service should register itself with Eureka.
+eureka.client.fetch-registry                    true         Whether to fetch registry info from Eureka.
+eureka.instance.lease-renewal-interval-in-seconds 30        How often (in seconds) the service sends heartbeats to Eureka.
+eureka.instance.lease-expiration-duration-in-seconds 90     Time after which the service is removed if no heartbeats are received.
+eureka.instance.hostname                         Auto-detected  Used for service instance identification.
+
+REMEMBER
+--------
+- Shutting down is NOT enough because Eureka removes instances only after a timeout (default: 90s).
+- Explicitly unregistering helps immediately remove services and prevent requests from hitting a dead instance.
+- Optimizing configuration can speed up failover and service removal.
+
+OPTIMIZED CONFIGURATION FOR FASTER DEREGISTRATION
+-------------------------------------------------
+eureka.instance.lease-renewal-interval-in-seconds=5
+# Send heartbeat every 5s
+
+eureka.instance.lease-expiration-duration-in-seconds=10
+# Remove instance after 10s of no heartbeat
