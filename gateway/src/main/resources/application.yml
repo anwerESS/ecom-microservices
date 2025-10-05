@@ -16,6 +16,21 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/api/orders/**, /api/cart/**
+        # Route 1: Eureka Dashboard (Main UI)
+        - id: eureka-server
+          uri: http://localhost:8761
+          predicates:
+            - Path=/eureka/main
+          filters:
+            # - SetPath=/   # replaces the entire request path with /
+            # ex: http://gateway:8080/eureka/main -> http://localhost:8761/
+            - SetPath=/   # replaces the entire request path with /
+        # Route 2: Eureka API & Static Resources
+        - id: eureka-server-static # load static files (without it the page will not load css and js files)
+          uri: http://localhost:8761
+          predicates:
+            - Path=/eureka/**
+
 # http://localhost:8080/api/users -> http://localhost:8082/api/users
 server:
   port: 8080
