@@ -8,6 +8,7 @@ import com.ecommerce.order.repositories.CartItemRepository;
 import com.ecommerce.order.dtos.CartItemRequest;
 import com.ecommerce.order.models.CartItem;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,9 +23,12 @@ public class CartService {
     private final CartItemRepository cartItemRepository;
     private final ProductServiceClient productServiceClient;
     private final UserServiceClient userServiceClient;
+    int attempt = 0;
 
-    @CircuitBreaker(name = "productService", fallbackMethod = "addToCartFallBack")
+//    @CircuitBreaker(name = "productService", fallbackMethod = "addToCartFallBack")
+@Retry(name = "retryBreaker", fallbackMethod = "addToCartFallBack")
     public boolean addToCart(String userId, CartItemRequest request) {
+        System.out.println("ATTEMPT COUNT: " + ++attempt);
         // Look for product
         ProductResponse productResponse = productServiceClient.getProductDetails(request.getProductId());
         if (productResponse == null || productResponse.getStockQuantity() < request.getQuantity())
