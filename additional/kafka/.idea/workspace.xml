@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61b7bedc-329b-4315-8b9b-f1023d8530dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kafka.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/demo/consumer/ConsumerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/demo/consumer/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/test/java/com/demo/consumer/ConsumerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/demo/consumer/ConsumerApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/target/classes/com/demo/consumer/KafkaConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/com/demo/producer/KafkaProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/com/demo/producer/ProducerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/test/java/com/demo/producer/ProducerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/target/classes/com/demo/producer/KafkaProducer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/target/classes/com/demo/producer/ProducerApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/src/main/java/com/demo/producer/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/com/demo/producer/KafkaProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
