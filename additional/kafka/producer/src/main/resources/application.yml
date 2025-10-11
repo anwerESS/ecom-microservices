@@ -10,3 +10,7 @@ spring:
         # controls whether type information is added as headers to the serialized JSON
         # when set to false, the type information is not added
         spring.json.add.type.headers: false
+  cloud:
+    function:
+      definition: uppercase
+    function.web.path: /uppercase
