@@ -4,3 +4,9 @@ spring:
   kafka:
     producer:
       bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        # controls whether type information is added as headers to the serialized JSON
+        # when set to false, the type information is not added
+        spring.json.add.type.headers: false
