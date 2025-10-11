@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/target/classes/com/demo/producer/KafkaProducer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/FAISAL/Desktop/courses/embarkx/Microservices/ecom-microservices/additional/kafka/consumer/pom.xml&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.producer" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
